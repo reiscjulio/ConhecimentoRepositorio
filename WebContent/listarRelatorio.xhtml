@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Listar Relatorio</title>
+    </h:head>
+    <h:body>
+        <h1>Listar Relatorio</h1>
+        <h:dataTable var="relatório" value="#{relatorioController.listarRelatorio}">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Tipo de relatório"/>
+                </f:facet>
+                <h:outputText value="#{relatorio.tipo_relatorio}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Alterar"/>
+                </f:facet>
+                <h:form>
+                    <h:commandButton action="#{relatorioController.prepararAlterarRelatorio}" value="Alterar"/>
+                    </h:form>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Excluir"/>
+                </f:facet>
+                <h:form>
+                    <h:commandButton action="#{relatorioController.removerRelatorio}" value="Excluir"/>
+                    </h:form>
+            </h:column>
+        </h:dataTable>
+        <br/>
+        <h:form>
+            <h:commandLink value="Novo Relatório" action="#{relatorioController.prepararAdicionarRelatorio}"/>
+        </h:form>
+        <h:form>
+            <h:commandLink action="index.xhtml" value="Voltar"/>
+        </h:form>                
+    </h:body>
+</html>

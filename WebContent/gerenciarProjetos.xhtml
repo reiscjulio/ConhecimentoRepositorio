@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Gerenciar Projetos</title>
+    </h:head>
+	<h:body>
+	<h1>Gerenciador de Projetos</h1>
+		<h:form>
+			Nome: <h:inputText value="#{projetosController.projetos.nome}"/><br/>
+			Data: <h:inputText value="#{projetosController.projetos.data}"/><br/>
+			Titulo: <h:inputText value="#{projetosController.projetos.titulo}"/><br/>
+			Data de inicio: <h:inputText value="#{projetosController.projetos.data_inicio}"/><br/>
+			Data de conclusao: <h:inputText value="#{projetosController.projetos.data_conclusao}"/><br/>
+			<h:commandButton action="#{projetosController.adicionarProjetos}" value="Adicionar Novo Projeto"/>
+			<h:commandButton action="#{projetosController.alterarProejtos}" value="Alterar projeto"/>
+			<br/>
+			<h:commandLink action="listarProjetos.xhtml" value="Voltar"/>
+		</h:form>
+	</h:body>
+</html>

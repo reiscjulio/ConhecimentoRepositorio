@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Gerenciar Atividade</title>
+    </h:head>
+	<h:body>
+	<h1>Gerenciador de Atividade</h1>
+		<h:form>
+			Titulo: <h:inputText value="#{atividadeController.atividade.titulo}"/><br/>
+			Data de início: <h:inputText value="#{atividadeController.atividade.data_inicio}"/><br/>
+			Data de conclusão: <h:inputText value="#{atividadeController.atividade.data_conclusao}"/><br/>
+			Resumo: <h:inputText value="#{atividadeController.atividade.resumo}"/><br/>
+			<h:commandButton action="#{atividadeController.adicionarAtividade}" value="Adicionar Nova Atividade"/>
+			<h:commandButton action="#{atividadeController.alterarAtividade}" value="Alterar Atividade"/>
+			<br/>
+			<h:commandLink action="listarAtividade.xhtml" value="Voltar"/>
+		</h:form>
+	</h:body>
+</html>

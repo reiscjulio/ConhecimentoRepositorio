@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Gerenciar Relatorio</title>
+    </h:head>
+	<h:body>
+	<h1>Gerenciador de Relatorio</h1>
+		<h:form>
+			Tipo: <h:inputText value="#{relatorioController.relatorio.tipo_relatorio}"/><br/>
+			<h:commandButton action="#{relatorioController.adicionarRelatorio}" value="Adicionar Novo Relatório"/>
+			<h:commandButton action="#{relatorioController.alterarRelatorio}" value="Alterar Relatório"/>
+			<br/>
+			<h:commandLink action="listarRelatorio.xhtml" value="Voltar"/>
+		</h:form>
+	</h:body>
+</html>
