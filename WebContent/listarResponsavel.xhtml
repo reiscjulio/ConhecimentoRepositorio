@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Listar Responsavel</title>
+    </h:head>
+    <h:body>
+        <h1>Listar Responsavel</h1>
+        <h:dataTable var="responsavel" value="#{responsavelController.listarResponsavel}">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Função"/>
+                </f:facet>
+                <h:outputText value="#{responsavel.funcao}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Login"/>
+                </f:facet>
+                <h:outputText value="#{responsavel.login}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Matrícula"/>
+                </f:facet>
+                <h:outputText value="#{responsavel.matricula}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Nome"/>
+                </f:facet>
+                <h:outputText value="#{responsavel.nome}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Senha"/>
+                </f:facet>
+                <h:outputText value="#{responsavel.senha}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Alterar"/>
+                </f:facet>
+                <h:form>
+                    <h:commandButton action="#{responsavelController.prepararAlterarResponsavel}" value="Alterar"/>
+                    </h:form>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Excluir"/>
+                </f:facet>
+                <h:form>
+                    <h:commandButton action="#{responsavelController.removerResponsavel}" value="Excluir"/>
+                    </h:form>
+            </h:column>
+        </h:dataTable>
+        <br/>
+        <h:form>
+            <h:commandLink value="Novo Responsavel" action="#{responsavelController.prepararAdicionarResponsavel}"/>
+        </h:form>
+        <h:form>
+            <h:commandLink action="index.xhtml" value="Voltar"/>
+        </h:form>                
+    </h:body>
+</html>

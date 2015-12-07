@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Listar Lições</title>
+    </h:head>
+    <h:body>
+        <h1>Listar Lições</h1>
+        <h:dataTable var="licoes" value="#{licoesController.listarLicoes}">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Etapa"/>
+                </f:facet>
+                <h:outputText value="#{licoes.etapa}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Problema"/>
+                </f:facet>
+                <h:outputText value="#{licoes.problema}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Solução"/>
+                </f:facet>
+                <h:outputText value="#{licoes.solucao}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Título"/>
+                </f:facet>
+                <h:outputText value="#{licoes.titulo}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Alterar"/>
+                </f:facet>
+                <h:form>
+                    <h:commandButton action="#{licoesController.prepararAlterarLicoes}" value="Alterar"/>
+                    </h:form>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Excluir"/>
+                </f:facet>
+                <h:form>
+                    <h:commandButton action="#{licoesController.removerLicoes}" value="Excluir"/>
+                    </h:form>
+            </h:column>
+        </h:dataTable>
+        <br/>
+        <h:form>
+            <h:commandLink value="Nova Lição" action="#{licoesController.prepararAdicionarLicoes}"/>
+        </h:form>
+        <h:form>
+            <h:commandLink action="index.xhtml" value="Voltar"/>
+        </h:form>                
+    </h:body>
+</html>
