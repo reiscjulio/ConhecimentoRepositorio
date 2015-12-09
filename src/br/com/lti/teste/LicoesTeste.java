@@ -24,7 +24,7 @@ public class LicoesTeste {
 		licao.setResponsavel(responsavel);
 		licao.setTitulo("Hibernate");
 		licao.setEtapa(1);
-		licao.setDataLicao(LocalDate.of(2015, Month.APRIL, 12));
+//		licao.setDataLicao(LocalDate.of(2015, Month.APRIL, 12));
 		licao.setProblema("Conexão postgre");
 		licao.setSolucao("Corrigir url do banco");
 
@@ -34,7 +34,7 @@ public class LicoesTeste {
 		assertEquals (1, licao.getResponsavel().getId());
 		assertEquals ("Hibernate", licao.getTitulo());
 		assertEquals (1, licao.getEtapa());
-		assertEquals (LocalDate.of(2015, Month.APRIL, 12), licao.getDataLicao());
+//		assertEquals (LocalDate.of(2015, Month.APRIL, 12), licao.getDataLicao());
 		assertEquals ("Conexão postgre", licao.getProblema());	
 		assertEquals ("Corrigir url do banco", licao.getSolucao());				
 	}
@@ -50,7 +50,7 @@ public class LicoesTeste {
 		licao.setResponsavel(responsavel);
 		licao.setTitulo("Persistencia");
 		licao.setEtapa(2);
-		licao.setDataLicao(LocalDate.of(2015, Month.APRIL, 12));
+//		licao.setDataLicao(LocalDate.of(2015, Month.APRIL, 12));
 		licao.setProblema("Conexao MySQL");
 		licao.setSolucao("Configurar usuario e senha do banco");		
 		
@@ -60,7 +60,7 @@ public class LicoesTeste {
 		assertEquals (1, licao.getResponsavel().getId());
 		assertEquals ("Persistencia", licao.getTitulo());
 		assertEquals (2, licao.getEtapa());
-		assertEquals (LocalDate.of(2015, Month.APRIL, 12), licao.getDataLicao());
+//		assertEquals (LocalDate.of(2015, Month.APRIL, 12), licao.getDataLicao());
 		assertEquals ("Conexão MySQL", licao.getProblema());	
 		assertEquals ("Configurar usuario e senha do banco", licao.getSolucao());	
 	}	

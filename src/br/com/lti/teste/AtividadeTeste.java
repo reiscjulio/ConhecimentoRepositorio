@@ -16,8 +16,8 @@ public class AtividadeTeste {
 		Atividade atividade = new Atividade();
 		
 		atividade.setTitulo("Titulo");
-		atividade.setData_inicio(LocalDate.of(2015, Month.MARCH, 5));
-		atividade.setData_conclusao(LocalDate.of(2015, Month.DECEMBER, 4));
+//		atividade.setData_inicio(LocalDate.of(2015, Month.MARCH, 5));
+//		atividade.setData_conclusao(LocalDate.of(2015, Month.DECEMBER, 4));
 		atividade.setResumo("Resumo");
 		
 		assertEquals("Titulo", atividade.getTitulo());
@@ -32,8 +32,8 @@ public class AtividadeTeste {
 		Atividade atividade = new Atividade();
 		
 		atividade.setTitulo("Estágio");
-		atividade.setData_inicio(LocalDate.of(2015, Month.MAY, 10));
-		atividade.setData_conclusao(LocalDate.of(2015, Month.DECEMBER, 4));
+//		atividade.setData_inicio(LocalDate.of(2015, Month.MAY, 10));
+//		atividade.setData_conclusao(LocalDate.of(2015, Month.DECEMBER, 4));
 		atividade.setResumo("Resumo");
 		
 		assertEquals("Estágio", atividade.getTitulo());

@@ -1,6 +1,6 @@
 package br.com.lti.modelo;
 
-import java.time.LocalDate;
+import java.util.Calendar;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +19,7 @@ public class Licoes {
 
 	private String titulo;
 	private int etapa;
-	private LocalDate dataLicao;
+	private Calendar data_licao;
 	private String problema;
 	private String solucao;
 	
@@ -55,12 +55,12 @@ public class Licoes {
 		this.etapa = etapa;
 	}
 	
-	public LocalDate getDataLicao() {
-		return dataLicao;
+	public Calendar getData_licao() {
+		return data_licao;
 	}
 	
-	public void setDataLicao(LocalDate dataLicao) {
-		this.dataLicao = dataLicao;
+	public void setData_licao(Calendar data_licao) {
+		this.data_licao = data_licao;
 	}
 	
 	public String getProblema() {

@@ -9,6 +9,14 @@
         <title>Listar Responsavel</title>
     </h:head>
     <h:body>
+    
+		<div id="header">
+			<ui:insert name="header">
+				<!-- Import de página do cabeçalho -->
+				<ui:include src="header.xhtml"/>
+			</ui:insert>
+		</div>	    
+    
         <h1>Listar Responsavel</h1>
         <h:dataTable var="responsavel" value="#{responsavelController.listarResponsavel}">
             <h:column>
@@ -64,6 +72,16 @@
         </h:form>
         <h:form>
             <h:commandLink action="index.xhtml" value="Voltar"/>
-        </h:form>                
+        </h:form>
+        
+		<br/>
+		
+		<div id="footer">
+			<ui:insert name="footer">
+				<!-- Import de página do rodapé -->
+				<ui:include src="footer.xhtml"/> 
+			</ui:insert>
+		</div>	        
+                        
     </h:body>
 </html>

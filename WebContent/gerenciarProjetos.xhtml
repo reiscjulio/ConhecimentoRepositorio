@@ -9,6 +9,14 @@
         <title>Gerenciar Projetos</title>
     </h:head>
 	<h:body>
+	
+		<div id="header">
+			<ui:insert name="header">
+				<!-- Import de página do cabeçalho -->
+				<ui:include src="header.xhtml"/>
+			</ui:insert>
+		</div>		
+	
 	<h1>Gerenciador de Projetos</h1>
 		<h:form>
 			Nome: <h:inputText value="#{projetosController.projetos.nome}"/><br/>
@@ -21,5 +29,15 @@
 			<br/>
 			<h:commandLink action="listarProjetos.xhtml" value="Voltar"/>
 		</h:form>
+		
+		<br/>
+		
+		<div id="footer">
+			<ui:insert name="footer">
+				<!-- Import de página do rodapé -->
+				<ui:include src="footer.xhtml"/> 
+			</ui:insert>
+		</div>			
+		
 	</h:body>
 </html>

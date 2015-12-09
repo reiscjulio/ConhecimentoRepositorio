@@ -9,6 +9,14 @@
         <title>Gerenciar Responsavel</title>
     </h:head>
 	<h:body>
+	
+		<div id="header">
+			<ui:insert name="header">
+				<!-- Import de página do cabeçalho -->
+				<ui:include src="header.xhtml"/>
+			</ui:insert>
+		</div>		
+	
 	<h1>Gerenciador de Responsavel</h1>
 		<h:form>
 			Função: <h:inputText value="#{responsavelController.responsavel.funcao}"/><br/>
@@ -21,5 +29,15 @@
 			<br/>
 			<h:commandLink action="listarResponsavel.xhtml" value="Voltar"/>
 		</h:form>
+		
+		<br/>
+		
+		<div id="footer">
+			<ui:insert name="footer">
+				<!-- Import de página do rodapé -->
+				<ui:include src="footer.xhtml"/> 
+			</ui:insert>
+		</div>			
+		
 	</h:body>
 </html>

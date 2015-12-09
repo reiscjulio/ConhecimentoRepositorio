@@ -19,11 +19,11 @@ public class ProjetosTeste {
 	{
 		Projetos projeto = new Projetos();
 		
-		projeto.setNome("Repositório de conhecimento");
-		projeto.setData(LocalDate.of(2015, Month.MARCH, 5));
-		projeto.setTitulo("Trabalho de LTI");
-		projeto.setData_inicio(LocalDate.of(2015, Month.MARCH, 5));
-		projeto.setData_conclusao(LocalDate.of(2015, Month.DECEMBER, 5));
+//		projeto.setNome("Repositório de conhecimento");
+//		projeto.setData(LocalDate.of(2015, Month.MARCH, 5));
+//		projeto.setTitulo("Trabalho de LTI");
+//		projeto.setData_inicio(LocalDate.of(2015, Month.MARCH, 5));
+//		projeto.setData_conclusao(LocalDate.of(2015, Month.DECEMBER, 5));
 		
 		assertEquals ("Repositório de conhecimento", projeto.getNome());
 		assertEquals (LocalDate.of(2015, Month.MARCH, 5), projeto.getData());
@@ -37,11 +37,11 @@ public class ProjetosTeste {
 	{
 		Projetos projeto = new Projetos();
 		
-		projeto.setNome("Repositório");
-		projeto.setData(LocalDate.of(2015, Month.MAY, 10));
-		projeto.setTitulo("Estágio");
-		projeto.setData_inicio(LocalDate.of(2015, Month.MAY, 10));
-		projeto.setData_conclusao(LocalDate.of(2015, Month.DECEMBER, 4));
+//		projeto.setNome("Repositório");
+//		projeto.setData(LocalDate.of(2015, Month.MAY, 10));
+//		projeto.setTitulo("Estágio");
+//		projeto.setData_inicio(LocalDate.of(2015, Month.MAY, 10));
+//		projeto.setData_conclusao(LocalDate.of(2015, Month.DECEMBER, 4));
 		
 		assertEquals ("Repositório", projeto.getNome());
 		assertEquals (LocalDate.of(2015, Month.MAY, 10), projeto.getData());

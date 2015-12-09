@@ -1,21 +1,34 @@
 package br.com.lti.modelo;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Calendar;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
-public class Atividade {
+public class Atividade implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue	
 	private int id;
 
 	private String titulo;
-	private LocalDate data_inicio;
-	private LocalDate data_conclusao;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Calendar data_inicio;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Calendar data_conclusao;
 	private String resumo;
 
 	
@@ -35,19 +48,19 @@ public class Atividade {
 		this.titulo = titulo;
 	}
 
-	public LocalDate getData_inicio() {
+	public Calendar getData_inicio() {
 		return data_inicio;
 	}
 
-	public void setData_inicio(LocalDate data_inicio) {
+	public void setData_inicio(Calendar data_inicio) {
 		this.data_inicio = data_inicio;
 	}
 
-	public LocalDate getData_conclusao() {
+	public Calendar getData_conclusao() {
 		return data_conclusao;
 	}
 
-	public void setData_conclusao(LocalDate data_conclusao) {
+	public void setData_conclusao(Calendar data_conclusao) {
 		this.data_conclusao = data_conclusao;
 	}
 

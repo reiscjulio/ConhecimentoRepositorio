@@ -50,7 +50,7 @@ public class JPALicoesDAO implements ILicoesDAO {
 		licao.setResponsavel(l.getResponsavel());
 		licao.setTitulo(l.getTitulo());
 		licao.setEtapa(l.getEtapa());
-		licao.setDataLicao(l.getDataLicao());
+		licao.setData_licao(l.getData_licao());
 		licao.setProblema(l.getProblema());
 		licao.setSolucao(l.getSolucao());
 		et.commit();
